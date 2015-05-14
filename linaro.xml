@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Repositories -->
+  <!-- Linaro Repositories -->
+  <remote name="linaro-android" fetch="git://android.git.linaro.org/" review="review.android.git.linaro.org" />
+  <remote name="linaro-other" fetch="git://git.linaro.org/" />
+  <remote name="git-ti-mirror" fetch="git://git.ti.com/" />
+  <remote name="linaro-private" fetch="ssh://git@dev-private-git.linaro.org/linaro-art/" />
+
+  <!-- Remove ART optimization related projects -->
+  <remove-project name="platform/art" />
+  <remove-project name="platform/build" />
+  <remove-project name="platform/external/vixl" />
+
+  <!-- Add ART optimization related projects -->
+  <project path="art" name="platform/art" revision="master" remote="linaro-private" />
+  <project path="build" name="platform/build" revision="master" remote="linaro-private" >
+  <copyfile src="core/root.mk" dest="Makefile" />
+  </project>
+  <project path="external/vixl" name="platform/external/vixl" revision="master" remote="linaro-private" />
+
+  <!-- Linaro AddOn Projects -->
+  <!-- Linaro Tests -->
+  <project path="external/busybox" name="platform/external/busybox" revision="linaro-1.21-master-20140515" remote="linaro-android"/>
+  <project path="external/waffle" name="platform/external/waffle" revision="linaro-armv8" remote="linaro-android"/>
+  <project path="external/piglit" name="platform/external/piglit" revision="linaro-armv8" remote="linaro-android"/>
+  <project path="external/powertop" name="platform/external/powertop-2.0" revision="android" groups="common" remote="linaro-android"/>
+  <project path="external/powerdebug" name="platform/external/powerdebug" revision="android" groups="common" remote="linaro-android"/>
+  <project path="external/ncurses" name="platform/external/ncurses" revision="linaro" groups="common" remote="linaro-android"/>
+  <project path="external/pm-qa" name="platform/external/pm-qa" revision="android" groups="common" remote="linaro-android"/>
+  <project path="external/linaro-android-kernel-test" name="platform/external/linaro-android-kernel-test" revision="linaro-juice-master-20140514" remote="linaro-android"/>
+  <project path="external/linaro-android-userspace-test" name="platform/external/linaro-android-userspace-test" revision="master" remote="linaro-android"/>
+  <project path="external/libc-bench" name="platform/external/libc-bench" revision="master" remote="linaro-android"/>
+  <project path="external/stringbench" name="platform/external/stringbench" revision="master" remote="linaro-android"/>
+  <project path="android-patchsets" name="android-patchsets" revision="master" remote="linaro-android"/>
+
+  <!-- Linaro Device Configs -->
+  <project path="device/linaro/juno" name="android/device/linaro/juno" revision="linaro-lollipop" remote="linaro-android" groups="non-default,juno" />
+  <project path="device/linaro/juno_prebuilt_kernel" name="android/device/linaro/juno_prebuilt_kernel" revision="linaro-lollipop" remote="linaro-android" groups="non-default,juno" />
+  <project path="device/linaro/juno32" name="device/linaro/juno32" revision="linaro-lollipop" remote="linaro-android" groups="non-default,juno32" />
+  <project path="device/linaro/build" name="device/linaro/common" remote="linaro-android" revision="linaro-lollipop-experimental"/>
+  <project path="device/linaro/vexpress" name="device/linaro/vexpress" revision="linaro-lollipop" remote="linaro-android" groups="non-default,vexpress" />
+  <project path="device/linaro/fvp" name="device/linaro/fvp-armv8" revision="linaro-fvp-lollipop" remote="linaro-android" groups="non-default,fvp-armv8,vexpress" />
+  <!-- Linaro Kernels -->
+  <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.10-armlt-juno" remote="linaro-other" groups="non-default,juno,juno32,fvp-armv8" />
+  <project path="kernel/linaro/vexpress" name="kernel/linux-linaro-stable" revision="linux-linaro-lsk-android" remote="linaro-other" groups="non-default,vexpress" />
+  <!-- Linaro Bootloaders -->
+  <project path="uefi" name="arm/uefi/uefi" revision="master" remote="linaro-other" groups="non-default,vexpress" />
+  <project path="vexpress-firmware" name="arm/vexpress-firmware" revision="juno-recovery-tarball" remote="linaro-other" groups="non-default,juno,juno32" />
+
+
+   <!-- TI Vayu board support -->
+  <project path="kernel/linaro/jacinto6evm" name="android-sdk/kernel-omap" revision="p-ti-linux-3.14.y-android" remote="git-ti-mirror" groups="device,ti" />
+  <project path="device/ti/proprietary-open" name="android-sdk/device-ti-proprietary-open" remote="git-ti-mirror" revision="d-lollipop-release" groups="device,ti" />
+  <project path="device/ti/common-open" name="android-sdk/device-ti-common-open" remote="git-ti-mirror" revision="d-lollipop-release" groups="device,ti" />
+  <project path="device/ti/jacinto6evm" name="android-sdk/device-ti-jacinto6evm" remote="git-ti-mirror" revision="d-lollipop-release" groups="device,ti" />
+  <project path="hardware/ti/dra7xx" name="android-sdk/platform-hardware-ti-dra7xx" remote="git-ti-mirror" revision="d-lollipop-release" groups="device,ti" />
+  <project path="external/libdrm" name="android-sdk/libdrm" remote="git-ti-mirror" revision="master" groups="ti" />
+</manifest>
