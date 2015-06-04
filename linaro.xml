@@ -3,7 +3,7 @@
   <!-- Repositories -->
   <!-- Linaro Repositories -->
   <remote  name="linaro-private"
-           fetch="ssh://dev-private-review.linaro.org/"
+           fetch="ssh://git@dev-private-review.linaro.org/"
            review="https://dev-private-review.linaro.org/"
            />
 
@@ -14,6 +14,10 @@
 
   <remote name="linaro-other"
           fetch="git://git.linaro.org/"
+          />
+
+  <remote name="github"
+          fetch="http://github.com/96boards"
           />
 
   <!-- Remove ART optimization related projects -->
@@ -27,12 +31,22 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="external/vixl" name="linaro-art/platform/external/vixl" revision="master" remote="linaro-private" />
+  <!-- android patchset project for apply patchsets -->
+  <project path="android-patchsets" name="android-patchsets" revision="master" remote="linaro-android"/>
 
   <!-- Linaro Device Configs -->
+  <!--TODO: need to change to master branch for this common git tree after the master branch ready-->
+  <project path="device/linaro/build" name="device/linaro/common" remote="linaro-android" revision="linaro-lollipop-experimental"/>
   <project path="device/linaro/juno" name="android/device/linaro/juno" revision="linaro-lollipop" remote="linaro-android" />
   <project path="device/linaro/juno32" name="device/linaro/juno32" revision="linaro-lollipop" remote="linaro-android" />
   <project path="device/linaro/juno_prebuilt_kernel" name="android/device/linaro/juno_prebuilt_kernel" revision="linaro-lollipop" remote="linaro-android" />
+  <project path="device/linaro/hikey" name="android_device_linaro_hikey" revision="master" remote="github" groups="device,hikey" />
 
   <!-- Linaro Kernels -->
   <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.10-armlt-juno" remote="linaro-other" />
+  <project path="kernel/linaro/hisilicon" name="linux" revision="hikey" remote="github" groups="non-default,hikey" />
+
+  <!--For Hikey Board -->
+  <project path="packages/apps/UsbSpeedSwitch" name="android_packages_apps_UsbSpeedSwitch" revision="master" remote="github" groups="device,hikey" />
+
 </manifest>
