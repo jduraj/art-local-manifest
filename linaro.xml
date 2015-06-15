@@ -3,7 +3,7 @@
   <!-- Repositories -->
   <!-- Linaro Repositories -->
   <remote  name="linaro-private"
-           fetch="ssh://git@dev-private-review.linaro.org/"
+           fetch="ssh://dev-private-review.linaro.org/"
            review="https://dev-private-review.linaro.org/"
            />
 
