@@ -45,7 +45,7 @@
   <project path="device/linaro/hikey" name="android_device_linaro_hikey" revision="master" remote="github" groups="device,hikey" />
 
   <!-- Linaro Kernels -->
-  <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.10-armlt-juno" remote="linaro-other" />
+  <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.18-armlt" remote="linaro-other" />
   <project path="kernel/linaro/hisilicon" name="linux" revision="hikey" remote="github" groups="non-default,hikey" />
 
   <!--For Hikey Board -->
