@@ -8,7 +8,7 @@
            />
 
   <remote name="linaro-android"
-          fetch="http://android.git.linaro.org/"
+          fetch="git://android.git.linaro.org/"
           review="review.android.git.linaro.org"
           />
 
