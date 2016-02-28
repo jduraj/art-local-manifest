@@ -46,13 +46,8 @@
   <project path="device/linaro/juno" name="android/device/linaro/juno" revision="linaro-lollipop" remote="linaro-android" />
   <project path="device/linaro/juno32" name="device/linaro/juno32" revision="linaro-lollipop" remote="linaro-android" />
   <project path="device/linaro/juno_prebuilt_kernel" name="android/device/linaro/juno_prebuilt_kernel" revision="linaro-lollipop" remote="linaro-android" />
-  <project path="device/linaro/hikey" name="android_device_linaro_hikey" revision="master" remote="github" groups="device,hikey" />
 
   <!-- Linaro Kernels -->
   <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.18-armlt" remote="linaro-other" />
-  <project path="kernel/linaro/hisilicon" name="linux" revision="hikey" remote="github" groups="non-default,hikey" />
-
-  <!--For Hikey Board -->
-  <project path="packages/apps/UsbSpeedSwitch" name="android_packages_apps_UsbSpeedSwitch" revision="master" remote="github" groups="device,hikey" />
 
 </manifest>
