@@ -49,9 +49,6 @@
   <!-- Linaro Device Configs -->
   <!--TODO: need to change to master branch for this common git tree after the master branch ready-->
   <project path="device/linaro/build" name="device/linaro/common" remote="linaro-android" revision="android-master"/>
-  <project path="device/linaro/juno" name="android/device/linaro/juno" revision="linaro-lollipop" remote="linaro-android" />
-  <project path="device/linaro/juno32" name="device/linaro/juno32" revision="linaro-lollipop" remote="linaro-android" />
-  <project path="device/linaro/juno_prebuilt_kernel" name="android/device/linaro/juno_prebuilt_kernel" revision="linaro-lollipop" remote="linaro-android" />
 
   <!-- Linaro Kernels -->
   <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.18-armlt" remote="linaro-other" />
