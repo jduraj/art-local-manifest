@@ -21,8 +21,6 @@
           />
 
   <!-- Remove ART optimization related projects -->
-  <remove-project name="device/huawei/angler"/>
-  <remove-project name="device/lge/bullhead"/>
   <remove-project name="platform/art"/>
   <remove-project name="platform/bionic"/>
   <remove-project name="platform/external/vixl"/>
