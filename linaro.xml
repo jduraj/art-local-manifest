@@ -40,15 +40,4 @@
   <!-- android patchset project for apply patchsets -->
   <project path="android-patchsets" name="android-patchsets" revision="master" remote="linaro-android"/>
 
-  <!-- Nexus device config pulled from Linaro's mirror  -->
-  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk,pdk" remote="linaro-android" />
-  <project path="device/lge/bullhead" name="device/lge/bullhead" groups="device,bullhead,pdk" remote="linaro-android" />
-
-  <!-- Linaro Device Configs -->
-  <!--TODO: need to change to master branch for this common git tree after the master branch ready-->
-  <project path="device/linaro/build" name="device/linaro/common" remote="linaro-android" revision="android-master"/>
-
-  <!-- Linaro Kernels -->
-  <project path="kernel/linaro/armv8" name="landing-teams/working/arm/kernel-release" revision="lsk-3.18-armlt" remote="linaro-other" />
-
 </manifest>
