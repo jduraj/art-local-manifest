@@ -34,13 +34,7 @@
   <project path="scripts" name="linaro-art/art-build-scripts" revision="master" remote="linaro-android" />
   <project path="benchmarks" name="linaro/art-testing" revision="master" remote="linaro-android" />
 
-  <!-- ART target for running art target tests" -->
-  <project path="device/generic/art" name="device/generic/art" remote="linaro-android" revision="master"/>
-
   <!-- android patchset project for apply patchsets -->
   <project path="android-patchsets" name="android-patchsets" revision="master" remote="linaro-android"/>
-
-  <!-- Prebuilt adb -->
-  <project path="prebuilts/runtime" name="platform/prebuilts/runtime" groups="pdk" clone-depth="1" />
 
 </manifest>
