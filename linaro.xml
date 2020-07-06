@@ -22,12 +22,10 @@
 
   <!-- Remove ART optimization related projects -->
   <remove-project name="platform/art"/>
-  <remove-project name="platform/bionic"/>
   <remove-project name="platform/external/vixl"/>
 
   <!-- Add ART optimization related projects -->
   <project path="art" name="linaro-art/platform/art" revision="master" remote="linaro-private"/>
-  <project path="bionic" name="linaro-art/platform/bionic" revision="master" remote="linaro-private"/>
   <project path="external/vixl" name="linaro-art/platform/external/vixl" revision="master" remote="linaro-private" />
 
   <!-- ART test scripts and benchmarks -->
